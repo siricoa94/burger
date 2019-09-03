@@ -1,7 +1,21 @@
 <nav><h1 id="burgerTitle">Burgers!</h1></nav>
+<div id="devouredDiv">
+  <h2>Burgers that are Devoured!</h2>
 
-<div id="fatherDiv">
-<h2>Burgers that are Fresh!</h2>
+<ul>
+       {{#each burger}}
+       {{#if devoured}}
+       <p>{{id}}. {{burger_name}}
+           <span><button class="change-devour" data-id="{{id}}" data-newdevour=false>
+                   {{#if devoured}}Make fresh!{{else}}Devour me!{{/if}}
+               </button></span>
+       </p>
+       {{/if}}
+       {{/each}}
+   </ul>
+</div>
+<div id="freshDiv">
+  <h2>Burgers that are Fresh!</h2>
 
 
 <ul>
@@ -15,20 +29,12 @@
        {{/unless}}
        {{/each}}
    </ul>
+</div>
 
-<h2>Burgers that are Devoured!</h2>
+<div id="fatherDiv">
 
-<ul>
-       {{#each burger}}
-       {{#if devoured}}
-       <p>{{id}}. {{burger_name}}
-           <span><button class="change-devour" data-id="{{id}}" data-newdevour=false>
-                   {{#if devoured}}Make fresh!{{else}}Devour me!{{/if}}
-               </button></span>
-       </p>
-       {{/if}}
-       {{/each}}
-   </ul>
+
+
 
 <h2>Add a Burger</h2>
 <form class="create-form">

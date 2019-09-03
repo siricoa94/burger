@@ -27,3 +27,24 @@ nav{
     opacity: 0.75;
 
 }
+#devouredDiv {
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    left: 5%;
+    width: 20%;
+    color:white;
+    background-color: orange;
+    opacity: 0.75;
+}
+#freshDiv {
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    left: 75%;
+    width: 20%;
+    color:white;
+    background-color: orange;
+    opacity: 0.75;
+
+}
