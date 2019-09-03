@@ -9,7 +9,7 @@
        {{#unless devoured}}
        <p>{{id}}. {{burger_name}}
            <span><button class="change-devour" data-id="{{id}}" data-newdevour=true>
-                   {{#if devoured}}devoured!{{else}}Devour me!{{/if}}
+                   {{#if devoured}}Make fresh!{{else}}Devour me!{{/if}}
                </button></span>
        </p>
        {{/unless}}
@@ -23,7 +23,7 @@
        {{#if devoured}}
        <p>{{id}}. {{burger_name}}
            <span><button class="change-devour" data-id="{{id}}" data-newdevour=false>
-                   {{#if devoured}}devoured!{{else}}Devour me!{{/if}}
+                   {{#if devoured}}Make fresh!{{else}}Devour me!{{/if}}
                </button></span>
        </p>
        {{/if}}
@@ -40,8 +40,8 @@
 
   <div class="form-group">
     <label for="sleep">Devoured?</label><br>
-    <input type="radio" name="Devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="Devoured" value="0"> Fresh
+    <input type="radio" name="devoured" value="1"> Devoured!<br>
+    <input type="radio" name="devoured" value="0" checked> Fresh<br>
   </div>
 
   <button type="submit">Add Burger</button>
