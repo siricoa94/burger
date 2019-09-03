@@ -3,23 +3,32 @@
 <div id="fatherDiv">
 <h2>Burgers that are Fresh!</h2>
 
+
 <ul>
-  {{#each Burgers}}
-    {{#unless Devoured}}
-      {{> Burgers/Burger-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+       {{#each burger}}
+       {{#unless devoured}}
+       <p>{{id}}. {{burger_name}}
+           <span><button class="change-devour" data-id="{{id}}" data-newdevour=true>
+                   {{#if devoured}}devoured!{{else}}Devour me!{{/if}}
+               </button></span>
+       </p>
+       {{/unless}}
+       {{/each}}
+   </ul>
 
 <h2>Burgers that are Devoured!</h2>
 
 <ul>
-  {{#each Burgers}}
-    {{#if Devoured}}
-      {{> Burgers/Burger-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+       {{#each burger}}
+       {{#if devoured}}
+       <p>{{id}}. {{burger_name}}
+           <span><button class="change-devour" data-id="{{id}}" data-newdevour=false>
+                   {{#if devoured}}devoured!{{else}}Devour me!{{/if}}
+               </button></span>
+       </p>
+       {{/if}}
+       {{/each}}
+   </ul>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
