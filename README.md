@@ -2,7 +2,7 @@
 This is an app designed for the user to create a burger. They can enter a name, and also set the state of the burger to either Fresh or Devoured! After the burger is made, the user can devour the burger, or make it fresh, and watch it switch sides.
 
 #Getting Started
-You will habe to npm install express, express-handlebars, mysql, and sequelize.
+You will have to npm install express, express-handlebars, mysql, and sequelize.
 
 #Example
 To install one of the softwares, simply type "npm i express" for example.
